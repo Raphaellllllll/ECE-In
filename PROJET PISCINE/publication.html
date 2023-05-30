@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Carte de crédit</title>
+	<meta charset="utf-8">
+</head>
+<body>
+	<form action="publication.php" method="post"enctype="multipart/form-data">
+		<table>
+			<tr>
+				<td>Image:</td>
+				<td><label for="file">Fichier</label>
+		<input type="file" name="file"></td>
+			</tr>
+			<tr>
+				<td>Lieu:</td>
+				<td><input type="text" step="0.01" name="lieu"></td>
+			</tr>
+			<tr>
+				<td>Date :</td>
+				<td><input type="date" step="0.01" name="date"></td>
+			</tr>
+			<tr>
+				<td>Heure :</td>
+				<td><input type="number" step="0.01" name="heure"></td>
+			</tr>
+			<tr>
+				<td>Les ressentis et faits :</td>
+				<td><input type="text" step="0.01" name="ressentis"></td>
+			</tr>
+			<tr>
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" name="button1" value="Submit">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+	</html>

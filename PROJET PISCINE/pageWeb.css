@@ -1,0 +1,153 @@
+/* LES DIFFERENTS PARTIES DU SITE  */
+		.wrapper{
+			background-color:  whitesmoke;
+			position: relative;
+			height: screen size;
+			width: screen size;
+		}
+
+		.header{
+			background-color: white;
+			border: 1px solid grey;
+			border-color: black;
+			height: 80px;
+			width: 1100px;
+			position: absolute;
+			margin: auto;
+			top: 73px;
+			bottom: 0px;
+			right: 0;
+			left: 0;
+		}
+
+		.navigation{
+			background-color: white;
+			border: 1px solid grey;
+			border-color: black;
+			height: 80px;
+			width: 1100px;
+			position: absolute;
+			margin: auto;
+			top: 153px;
+			bottom:0px;
+			right: 0;
+			left: 0;
+		}
+
+		.section{
+			background-color: white;
+			border: 1px solid grey;
+			position: absolute;
+			height:282px;
+			width: 1100px;
+			margin: auto;
+			top: 334px;
+			bottom: 0;
+			right: 0px;
+			left: 0px;
+		}
+
+		.footer{
+			background-color: white;
+			border: 1px solid grey;
+			border-color: black;
+			position: absolute;
+			height: 50px;
+			width: 1100px;
+			margin: auto;
+			top: 500px;
+			bottom: 0;
+			right: 0;
+			left: 0;
+		}
+
+/* LES BALISES QUI SE TROUVENT DANS LE HEADER */
+		.header h1{
+			position: absolute;
+			top: 15px;
+			bottom: 0;
+			right: 0px;
+			left: 150px;
+		}
+		.header h2{
+			position: absolute;
+			top: 20px;
+			bottom: 0;
+			right: 0px;
+			left: 60px;
+			text-decoration-color: blue;
+		}
+
+		.header img{
+			position: absolute;
+			margin: center;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 900px;
+
+		}
+
+
+/* LES BOUTONS QUI SONT DANS LA NAVIGATION */
+
+		#bouton1{
+			position: absolute;
+			margin: center;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			right: 750px;
+			left: 0px;
+		}
+
+		#bouton2{
+			position: absolute;
+			margin: center;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			right: 450px;
+			left: 0px;
+		}
+
+		#bouton3{
+			position: absolute;
+			margin: center;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			right: 150px;
+			left: 0px;
+		}
+
+		#bouton4{
+			position: absolute;
+			margin: center;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 150px;
+		}
+
+		#bouton5{
+			position: absolute;
+			margin: center;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 450px;
+		}
+
+		#bouton6{
+			position: absolute;
+			margin: center;
+			margin: auto;
+			top: 0;
+			bottom: 0;
+			right: 0;
+			left: 750px;
+		}
