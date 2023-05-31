@@ -1,92 +1,105 @@
+<?php 
+
+session_start(); 
+
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+//identifier le nom de base de données 
+$database = "site";
+
+//connectez-vous dans votre BDD 
+//Rappel : votre serveur = localhost | votre login = root | votre mot de pass = '' (rien) 
+$db_handle = mysqli_connect('localhost', 'root', '' ); 
+$db_found = mysqli_select_db($db_handle, $database);
+
+//saisir les données du formulaire
+$pseudo = isset($_POST["pseudo"]) ? $_POST["pseudo"] : "";
+$email = isset($_POST["email"]) ? $_POST["email"] : "";
+
+if(isset($_POST["Soumettre"]))
+{
+	if($db_found)
+	{
+		if(!empty($pseudo))
+		{
+			$sql = "SELECT * FROM utilisateurs WHERE pseudo LIKE '%$pseudo%'"; 
+			$result = mysqli_query($db_handle, $sql); //exécuter une requete sql
+
+			if($result && mysqli_num_rows($result) != 0)
+			{
+				$_SESSION['pseudo'] = $_POST['pseudo'];
+				$_SESSION['email'] = mysqli_fetch_assoc($result)['email'];
+				if ($_SESSION['pseudo'] == 'admin' && $_SESSION['email'] == 'admin@edu.ece.fr') {
+        // Afficher la page d'administration
+					echo '<script>window.location.href = "administrateur.php";</script>';
+
+
+					
+				}
+
+			}
+			else
+			{
+				echo "Aucun utilisateur trouvé";
+			}
+		}
+		else
+		{
+			echo "Veuillez saisir un pseudo";
+		}
+	}
+	else
+	{
+		echo "Database not found";
+	}
+}
+
+//fermer la connection 
+mysqli_close($db_handle); 
+?>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Verifier utilisateur et son mot de passe</title>
-	<meta charset="utf-8">
+	<title>Connexion</title>
+	<meta charset="utf-8"> <!-- Encodage de la page -->
 	<style type="text/css">
-
-		.connexion img{
-			height: 800px;
-			width: 1000px;
-			position: relative;
-
+		.connexion {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
 		}
-		.connexion form{
-			text-align: center;
-			position: absolute;
-			margin: auto;
-			top: 300px;
-			bottom: 0px;
-			right: 0;
-			left: 1200px;
+
+		.connexion form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
 		}
 
 		.connexion table {
-			width: 400px;
+			margin-bottom: 10px;
 		}
 	</style>
-
-	<?php
-	$login = isset($_POST["identifiant"]) ? $_POST["identifiant"] : "";
-	$pass = isset($_POST["passw"]) ? $_POST["passw"] : "";
-
-// Tableau associatif : Utilisateur => mot de passe
-// Dans cet exemple, nous avons les informations pour Stelly et Hina
-	$users = array(
-		"Stelly" => "Wu",
-		"Hina" => "Manolo"
-	);
-
-// Vérifier si l'utilisateur est présent dans le tableau
-	$found = false;
-	foreach ($users as $user => $password) {
-		if ($user == $login) {
-			$found = true;
-			break;
-		}
-	}
-
-// Vérifier si l'utilisateur et le mot de passe correspondent
-	$connexion = false;
-	if ($found) {
-		if ($users[$login] == $pass) {
-			$connexion = true;
-		}
-	}
-
-// Afficher le message correspondant
-	if (!$found) {
-		echo "Connexion refusée. Utilisateur inconnu.";
-	} else {
-		if ($connexion) {
-			if ($login == "Stelly") {
-				echo "Bienvenue, vous êtes un élève.";
-			} elseif ($login == "Hina") {
-				echo "Bienvenue, vous êtes un professeur.";
-			}
-		} else {
-			echo "Connexion refusée. Mot de passe invalide.";
-		}
-	}
-	?>
-
 </head>
-
-
 <body>
-	<div class="connexion" >
-
-		<img src="img1.png">
-
-		<form action="connexion.php" method="post" >
-			<table border="2">
+	<div class="connexion">
+		<form action="connexion.php" method="POST">
+			<table>
 				<tr>
-					<td>Identifiant:</td>
-					<td><input type="text" name="identifiant"></td>
+					<td>Pseudo:</td>
+					<td><input type="text" name="pseudo"></td>
 				</tr>
 				<tr>
-					<td>Mot de passe:</td>
-					<td><input type="password" name="passw"></td>
+					<td>E-mail:</td>
+					<td><input type="text" name="email"></td>
 				</tr>
 				<tr>
 					<td colspan="2" align="center">
@@ -95,12 +108,6 @@
 				</tr>
 			</table>
 		</form>
-
 	</div>
 </body>
-
-
-
-
-
 </html>
