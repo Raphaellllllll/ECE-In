@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Introduction au Bootstrap</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        .wrapper{
+            background-color:  #194B8F;
+            position: relative;
+            height: 6000px;
+            width: 1650px;
+        }
+        .header{
+            background-color: white;
+            border: 1px solid grey;
+            border-color: black;
+            height: 80px;
+            width: 1650px;
+            position: absolute;
+            margin: auto;
+            top: 0px;
+            bottom: 5920px;
+            right: 0;
+            left: 0;
+        }
+
+        /* LES BALISES QUI SE TROUVENT DANS LE HEADER */
+        .header h2{
+            position: absolute;
+            top: 10px;
+            bottom: 0;
+            right: 0px;
+            left: 0px;
+            text-decoration-color: blue;
+        }
+
+        .header #imagelogo{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 650px;
+            left: 0px;
+
+        }
+
+        .navigation{
+            background-color: white;
+            border: 1px solid grey;
+            border-color: black;
+            height: 80px;
+            width: 1650px;
+            position: absolute;
+            margin: auto;
+            top: 0px;
+            bottom:5770px;
+            right: 0;
+            left: 0;
+        }
+
+
+
+/* LES BOUTONS QUI SONT DANS LA NAVIGATION */
+
+        #bouton1{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 750px;
+            left: 0px;
+        }
+
+        #bouton2{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 450px;
+            left: 0px;
+        }
+
+        #bouton3{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 150px;
+            left: 0px;
+        }
+
+        #bouton4{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 150px;
+        }
+
+        #bouton5{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 450px;
+        }
+
+        #bouton6{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 750px;
+        }
+
+        .container{
+
+
+            height: 1000px;
+            width: 1100px;
+            position: absolute;
+            margin: auto;
+            top: 0px;
+            bottom:4500px;
+            right: 0;
+            left: 0;
+        }
+        .container p{
+            text-align: justify;
+            text-align: center;
+            text-decoration-color: white;
+        }
+
+        .container h1{
+            position: absolute;
+            margin: auto;
+            top: 1000px;
+            bottom:0px;
+            right: 0;
+            left: 0;
+        }
+
+        .container h2{
+            position: absolute;
+            margin: auto;
+            top: 250px;
+            bottom:0px;
+            right: 0;
+            left: 0;
+        }
+
+
+
+        .carousel-slide{
+            position: absolute;
+            margin: auto;
+            top: 400px;
+            bottom:0px;
+            right: 0;
+            left: 0;
+        }
+
+        .section{
+            background-color: white;
+            border: 1px solid grey;
+            position: absolute;
+            height:400px;
+            width: 350px;
+            margin: auto;
+            top: 250px;
+            bottom: 0px;
+            right: 0px;
+            left: 800px;
+        }
+
+        .section h3{
+            position: absolute;
+            margin: auto;
+            top: 50px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+        }
+
+
+        .section p{
+            position: absolute;
+            margin: auto;
+            top: 150px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+        }
+
+        .votrePublication{
+            background-color: white;
+            border: 1px solid grey;
+            border-color: black;
+            height: 150px;
+            width: 800px;
+            position: absolute;
+            border-radius: 20px;
+            margin: auto;
+            top: 1300px;
+            bottom: 0px;
+            right: 0;
+            left: 0;
+        }
+
+        .votrePublication #imageProfil{
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            margin: auto;
+            top:0px;
+            bottom: 0px;
+            right: 650px;
+            left: 0;
+        }
+
+         .votrePublication #bouton{
+            height: 80px;
+            width: 600px;
+            position: absolute;
+            margin: auto;
+            top:0px;
+            bottom: 0px;
+            right: 0px;
+            left: 100px;
+        }
+
+
+
+
+        .publication1{
+            background-color: white;
+            border: 1px solid grey;
+            border-color: black;
+            height: 1300px;
+            width: 800px;
+            position: absolute;
+            margin: auto;
+            top: 2100px;
+            bottom: 0px;
+            right: 0;
+            left: 0;
+        }
+
+        .publication1 img{
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            margin: auto;
+            top:0px;
+            bottom: 1150px;
+            right: 650px;
+            left: 0;
+        }
+
+        .publication1 h4{
+            position: absolute;
+            margin: auto;
+            top:40px;
+            bottom: 0px;
+            right: 0px;
+            left: 160px;
+        }
+
+        .publication1 h6{
+            position: absolute;
+            margin: auto;
+            top:60px;
+            bottom: 0px;
+            right: 0px;
+            left: 160px;
+            color: grey;
+        }
+
+        .publication2{
+            background-color: white;
+            border: 1px solid grey;
+            border-color: black;
+            height: 1300px;
+            width: 800px;
+            position: absolute;
+            margin: auto;
+            top: 3500px;
+            bottom: 0px;
+            right: 0;
+            left: 0;
+        }
+
+        .texte{
+            position: absolute;
+            margin: auto;
+            top:150px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+        }
+
+        .texte p{
+            text-align: left;
+        }
+
+        .texte #image1{
+            height: 400px;
+            width: 300px;
+            position: absolute;
+            margin: auto;
+            top:50px;
+            bottom: 0px;
+            right: 400px;
+            left: 0px;
+        }
+        .texte #image2{
+            height: 450px;
+            width: 350px;
+            position: absolute;
+            margin: auto;
+            top:50px;
+            bottom: 0px;
+            right: 0px;
+            left: 400px;
+        }
+
+        .footer{
+            background-color: white;
+            border: 1px solid grey;
+            border-color: black;
+            position: absolute;
+            height: 200px;
+            width: 1650px;
+            margin: auto;
+            top: 5650px;
+            bottom: 0;
+            right: 500px;
+            left: 0px;
+        }
+        .footer #image1{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0px;
+            left: 0px;
+
+        }
+
+
+
+    </style>
+</head>
+<body>
+
+    <div class="wrapper" >
+
+    <div class="header">
+            <h2 style="color: #194B8F;"><center>    Social Media Professionnel de l'ECE Paris</h2><center>
+                <img src="logopro.png" height="70px" width="90px" id="imagelogo">
+
+    </div>
+    <div class="navigation">
+
+
+                <a href="accueil.html"><img src="Accueil.png" width="107" height="60px" id="bouton1"></a>
+                <a href="reseau.html"><img src="Reseau.png" width="120px" height="60px" id="bouton2"></a>
+                <a href="vous.html" ><img src="Vous.png" width="107" height="55px" id="bouton3"></a>
+                <a href="notifications.html"><img src="Notifications.png" width="120px" height="60px" id="bouton4"></a>
+                <a href="messagerie.html"><img src="Messagerie.png" width="107" height="60px" id="bouton5"></a>
+                <a href="emplois.html"><img src="Emplois.png" width="107" height="60px" id="bouton6"></a>
+
+     </div>
+
+
+    <div class="container">
+        <p style="color:white"> <b>ECE Ln </b>est un site web social media professionnel pour la communauté ECE Paris. Ce site web sera un réseau social mais avec des <b>objectifs professionnels</b>. </p>
+        <p></p>
+        <p style="color:white">
+            Que vous soyez étudiant/e de licence, master ou doctorat, ou étudiant/e apprenti dans un entreprise, ou étudiant/e qui cherche un <b>stage dans une entreprise </b>ou peut-être un/e enseignant/e ou employé de l’Ecole qui cherche des <b>partenaires pour votre projet de recherche ou autre</b>, ce site web s'adresse à toutes et à tous qui souhaitent prendre leur vie professionnelle au sérieux, trouver de nouvelles opportunités pour développer leur carrière et se connecter avec d'autres personnes pour des buts professionnels.
+        </p>
+        <p></p>
+        <center><h2 style="color:white"><b> EVENEMENT DE LA SEMAINE</b></h2></center> 
+        
+
+        <div id="myCarousel" class="carousel-slide" data-ride="carousel" data-interval="1000">
+           <!-- Indicators -->
+           <ol class="carousel-indicators">
+               <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+               <li data-target="#myCarousel" data-slide-to="1"></li>
+               <li data-target="#myCarousel" data-slide-to="2"></li>
+           </ol>
+           <!-- Wrapper pour les images -->
+
+           <div class="carousel-inner">
+               <div class="item active">
+                <img src="img1.png" alt="Paris" style="width:80px height: 300px;">
+                <div class="carousel-caption">
+                   <h3>ECE</h3>
+                   <p>Paris</p>
+               </div>
+           </div>
+
+           <div class="item">
+               <img src="img2.png" alt="Berlin" style="width:100px height: 200px;">
+               <div class="carousel-caption">
+                   <h3>Journee porte ouverte</h3>
+                   <p>28/05</p>
+               </div>
+           </div>
+
+           <div class="item">
+               <img src="img3.png" alt="Rome" style="width:200px height: 300px;">
+               <div class="carousel-caption">
+                   <h3>Matières</h3>
+                   <p>Electronique / Informatique</p>
+               </div>
+           </div>
+
+       </div>
+
+   </div>
+
+   <div class="section" >
+    <center><h3><b>Journée porte ouverte à l'ECE</b></h3></center>
+    <p>Vous souhaitez découvrir les locaux, visiter les laboratoires, rencontrer des élèves, les enseignements et la direction ? Les Portes Ouvertes sont un incontournable pour mieux connaître l’école. <b>Rencontrez les élèves </b>et échangez sur les séjours à l’international. Posez vos questions aux enseignants et aux diplomés de l’école. Venez nous rencontrer au <b>10 rue sextius michel</b>, Paris, le <b>28/05 </b>!</p>
+</div>
+<center><h1 style="color:white"><b>TOUTES LES ACTIVITES</b></h1></center>
+
+<div class="votrePublication" >
+    <img src="stelly.png" class="img-circle" id="imageProfil">
+    <a href="publicationTout.php"><img id="bouton" src="boutonCommencerPost.png"></a>
+    
+</div>
+
+
+<div class="publication1">
+    <img id="image3"src="stelly.png" class="img-circle">
+    <h4><b>stelly wu</b></h4>
+    <h6>29/05</h6>
+
+    <div class="texte" >
+
+        <p>Bonjour à tous</p><br>
+
+        <p>  - Actuellement étudiante en 2e année de prépa intégrée à l’ECE. Ecole d'ingénieurs. Engineering School., je suis à la recherche d’un contrat d'apprentissage pour une durée de 3 ans.</p><br>
+
+        <p>- Je suis ouverte à tous secteurs d’activité dans l'informatique afin de découvrir la cybersécurité en entreprise.</p>
+        <p>Je vous partage ci-dessous ma lettre de motivation et mon CV.</p>
+        <p>🗓️Quand? A partir de septembre 2023</p>
+        <p>⏳Durée: 3 ans</p>
+        <p>📍Lieu: Île-de-France</p>
+        <p>📧 E-mail: stelly.wu@edu.ece.fr</p>
+        <p>Si vous êtes dans le domaine ou connaissez des personnes dans ce domaine, je vous remercie de m’aider dans ma recherche</p>
+        <a href="C:\wamp64\www\PROJET PISCINE\CV.pdf"target="_blank"> <img id="image1"src="CV.png" ></a>
+        <a href="C:\wamp64\www\PROJET PISCINE\lettreMotivation.pdf"target="_blank"> <img id="image2"src="lettreMotivation.png" ></a>
+        
+    </div>
+</div>
+
+
+
+<div class="publication2" >
+
+    
+</div>
+<div class="footer">
+     <img src="logopro.png" height="70px" width="90px" id="imagelogo">
+    <center><small>Copyright &copy; 2023, ECE ln, Social Media Professionnel de l'ECE Paris</small></center>
+    <center><a href="prime.properties@gmail.com">eceln@gmail.com</a></center>
+</div>
+
+
+
+
+
+</div>
+</div>
+</body>
+</html>
