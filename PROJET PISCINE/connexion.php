@@ -13,36 +13,48 @@ $database = "site";
 $db_handle = mysqli_connect('localhost', 'root', '' ); 
 $db_found = mysqli_select_db($db_handle, $database);
 
+
+
 //saisir les données du formulaire
 $pseudo = isset($_POST["pseudo"]) ? $_POST["pseudo"] : "";
 $email = isset($_POST["email"]) ? $_POST["email"] : "";
 
-if(isset($_POST["Soumettre"]))
-{
+if(isset($_POST["button1"])){
 	if($db_found)
 	{
 		if(!empty($pseudo))
 		{
-			$sql = "SELECT * FROM utilisateurs WHERE pseudo LIKE '%$pseudo%'"; 
-			$result = mysqli_query($db_handle, $sql); //exécuter une requete sql
+			for ($i=1; $i<10; $i++){
 
-			if($result && mysqli_num_rows($result) != 0)
-			{
-				$_SESSION['pseudo'] = $_POST['pseudo'];
-				$_SESSION['email'] = mysqli_fetch_assoc($result)['email'];
-				if ($_SESSION['pseudo'] == 'admin' && $_SESSION['email'] == 'admin@edu.ece.fr') {
-        // Afficher la page d'administration
+				if($pseudo == 'admin' AND $email == 'admin@edu.ece.fr'){
 					echo '<script>window.location.href = "administrateur.php";</script>';
+				}
+				else{
+
+					$sql = "SELECT * FROM utilisateurs WHERE ID = $i"; 
+					$result = mysqli_query($db_handle, $sql); //exécuter une requete sql
+
+					if($result && mysqli_num_rows($result) != 0)
+					{
+						$_SESSION['pseudo'] = $_POST['pseudo'];
+						$_SESSION['email'] = mysqli_fetch_assoc($result)['email'];
+						if ($_SESSION['pseudo'] == $pseudo && $_SESSION['email'] == $email) {
+							echo '<script>window.location.href = "accueil.html";</script>';
+							$sql = "DELETE FROM numero WHERE id !=25"; 
+							$result =mysqli_query($db_handle, $sql); 
+							$sql = "INSERT INTO numero(id) VALUES($i)"; 
+							$result =mysqli_query($db_handle, $sql); 
+							echo "<p>Add successful.</p>"; 
 
 
-					
+
+						}
+
+					}
 				}
 
 			}
-			else
-			{
-				echo "Aucun utilisateur trouvé";
-			}
+
 		}
 		else
 		{
@@ -91,7 +103,7 @@ mysqli_close($db_handle);
 </head>
 <body>
 	<div class="connexion">
-		<form action="connexion.php" method="POST">
+		<form action="" method="POST">
 			<table>
 				<tr>
 					<td>Pseudo:</td>
@@ -103,7 +115,7 @@ mysqli_close($db_handle);
 				</tr>
 				<tr>
 					<td colspan="2" align="center">
-						<input type="submit" name="Soumettre">
+						<input type="submit" name="button1" value="Soumettre">
 					</td>
 				</tr>
 			</table>

@@ -8,19 +8,124 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <style type="text/css">
+        .wrapper{
+            background-color:  #194B8F;
+            position: relative;
+            height: 9000px;
+            width: 1650px;
+        }
         .header{
             background-color: white;
             border: 1px solid grey;
             border-color: black;
             height: 80px;
-            width: 1500px;
+            width: 1650px;
             position: absolute;
             margin: auto;
             top: 0px;
-            bottom: 400px;
+            bottom: 8920px;
             right: 0;
             left: 0;
         }
+
+        /* LES BALISES QUI SE TROUVENT DANS LE HEADER */
+        .header h2{
+            position: absolute;
+            top: 10px;
+            bottom: 0;
+            right: 0px;
+            left: 0px;
+            text-decoration-color: blue;
+        }
+
+        .header #imagelogo{
+            position: absolute;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 650px;
+            left: 0px;
+
+        }
+
+        .navigation{
+            background-color: white;
+            border: 1px solid grey;
+            border-color: black;
+            height: 80px;
+            width: 1650px;
+            position: absolute;
+            margin: auto;
+            top: 0px;
+            bottom:8770px;
+            right: 0;
+            left: 0;
+        }
+
+
+
+/* LES BOUTONS QUI SONT DANS LA NAVIGATION */
+
+        #bouton1{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 750px;
+            left: 0px;
+        }
+
+        #bouton2{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 450px;
+            left: 0px;
+        }
+
+        #bouton3{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 150px;
+            left: 0px;
+        }
+
+        #bouton4{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 150px;
+        }
+
+        #bouton5{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 450px;
+        }
+
+        #bouton6{
+            position: absolute;
+            margin: center;
+            margin: auto;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 750px;
+        }
+
         .container{
 
 
@@ -28,29 +133,30 @@
             width: 1100px;
             position: absolute;
             margin: auto;
-            top: 800px;
-            bottom:0px;
+            top: 0px;
+            bottom:7500px;
             right: 0;
             left: 0;
         }
         .container p{
             text-align: justify;
             text-align: center;
-        }
-
-        .container h1{
-            position: absolute;
-            margin: auto;
-            top: 1000px;
-            bottom:0px;
-            right: 0;
-            left: 0;
+            text-decoration-color: white;
         }
 
         .container h2{
             position: absolute;
             margin: auto;
             top: 250px;
+            bottom:0px;
+            right: 0;
+            left: 0;
+        }
+
+        .container h1{
+            position: absolute;
+            margin: auto;
+            top: 2050px;
             bottom:0px;
             right: 0;
             left: 0;
@@ -67,12 +173,14 @@
             left: 0;
         }
 
+
+
         .section{
-            background-color: white;
-            border: 1px solid grey;
+            background-color:#194B8F;
+            border: 2px solid grey;
             position: absolute;
             height:400px;
-            width: 350px;
+            width: 450px;
             margin: auto;
             top: 250px;
             bottom: 0px;
@@ -83,6 +191,7 @@
         .section h3{
             position: absolute;
             margin: auto;
+            color: white;
             top: 50px;
             bottom: 0px;
             right: 0px;
@@ -93,10 +202,110 @@
         .section p{
             position: absolute;
             margin: auto;
+            color: white;
             top: 150px;
+            bottom: 0px;
+            right: 10px;
+            left: 10px;
+             text-align: left;
+        }
+
+        .webinaire{
+            position: absolute;
+            margin: auto;
+            top: 950px;
+            bottom:0px;
+            right: 0;
+            left: 70px;
+        }
+
+        .webinaire img{
+            height:500px;
+            width: 600px;
+        }
+
+        .section2{
+            background-color:#194B8F;
+            border: 2px solid grey;
+            position: absolute;
+            height:400px;
+            width: 450px;
+            margin: auto;
+            top: 1200px;
+            bottom: 0px;
+            right: 0px;
+            left: 800px;
+        }
+
+        .section2 h3{
+            position: absolute;
+            margin: auto;
+            color: white;
+            top: 50px;
             bottom: 0px;
             right: 0px;
             left: 0px;
+        }
+
+
+        .section2 p{
+            position: absolute;
+            margin: auto;
+            color: white;
+            top: 150px;
+            bottom: 0px;
+            right: 10px;
+            left: 10px;
+             text-align: left;
+        }
+
+        .evenement{
+            position: absolute;
+            margin: auto;
+            top: 1500px;
+            bottom:0px;
+            right: 0;
+            left: 70px;
+        }
+
+        .evenement img{
+            height:500px;
+            width: 600px;
+        }
+
+        .section3{
+            background-color:#194B8F;
+            border: 2px solid grey;
+            position: absolute;
+            height:400px;
+            width: 450px;
+            margin: auto;
+            top: 1750px;
+            bottom: 0px;
+            right: 0px;
+            left: 800px;
+        }
+
+        .section3 h3{
+            position: absolute;
+            margin: auto;
+            color: white;
+            top: 50px;
+            bottom: 0px;
+            right: 0px;
+            left: 0px;
+        }
+
+
+        .section3 p{
+            position: absolute;
+            margin: auto;
+            color: white;
+            top: 150px;
+            bottom: 0px;
+            right: 10px;
+            left: 10px;
+            text-align: left;
         }
 
         .votrePublication{
@@ -108,11 +317,12 @@
             position: absolute;
             border-radius: 20px;
             margin: auto;
-            top: 1300px;
+            top: 2200px;
             bottom: 0px;
             right: 0;
             left: 0;
         }
+       
 
         .votrePublication #imageProfil{
             height: 100px;
@@ -147,7 +357,7 @@
             width: 800px;
             position: absolute;
             margin: auto;
-            top: 2100px;
+            top: 3000px;
             bottom: 0px;
             right: 0;
             left: 0;
@@ -191,7 +401,7 @@
             width: 800px;
             position: absolute;
             margin: auto;
-            top: 3500px;
+            top: 4500px;
             bottom: 0px;
             right: 0;
             left: 0;
@@ -231,15 +441,146 @@
             left: 400px;
         }
 
-        .header img{
+        .footer{
+            background-color: white;
+            border: 1px solid grey;
+            border-color: black;
             position: absolute;
-            margin: center;
-            margin: auto;
-            top: 0;
+            height: 200px;
+            width: 1650px;
+            margin:auto;
+            top: 8700px;
             bottom: 0;
-            right: 250px;
+            right: 800px;
+            left: -280px;
+        }
+
+         .footer a{
+            position: absolute;
+            margin: auto;
+            top: 70px;
+            z-index: 2;
+            bottom: 0px;
+            right: 360px;
+            left: 450px;
+
+        }
+        .footer #a1{
+            position: absolute;
+            margin: auto;
+            z-index: 3;
+            top: 60px;
+            bottom: 90px;
+            right: 600px;
+            left: 690px;
+
+        }
+        .footer #imagelogo{
+            position: absolute;
+            margin: auto;
+            top: 0px;
+            bottom: 110px;
+            right: 1500px;
             left: 0px;
 
+        }
+        .footer small{
+            position: absolute;
+            margin: auto;
+            top: 160px;
+            bottom: 0px;
+            right: 1180px;
+            left: 0px;
+        }
+        .footer h4{
+            position: absolute;
+            margin: auto;
+            top: 30px;
+            bottom: 0px;
+            right: 1070px;
+            left: 0px;
+        }
+        .footer #texteFooter{
+            position: absolute;
+            margin: auto;
+            top: 75px;
+            bottom: 0px;
+            right: 1100px;
+            left: 50px;
+        }
+        .footer #texte2{
+            position: absolute;
+            margin: auto;
+            top: 30px;
+            bottom: 0px;
+            right: 0px;
+            left: 50px;
+        }
+
+        .footer #texte3{
+            position: absolute;
+            margin: auto;
+            top: 88px;
+            bottom: 0px;
+            right: 0px;
+            left: 80px;
+        }
+        
+        .footer #texte4{
+            position: absolute;
+            margin: auto;
+            top: 30px;
+            bottom: 0px;
+            right: 0px;
+            left: 600px;
+        }
+        .footer #texte5{
+            position: absolute;
+            margin: auto;
+            top: 0px;
+            bottom: 200px;
+            right: 0px;
+            left: 470px;
+        }
+        .footer #texte6{
+            position: absolute;
+            margin: auto;
+            top: 20px;
+            bottom: 0px;
+            right: 0px;
+            left: 505px;
+        }
+        .footer #texte7{
+            position: absolute;
+            margin: auto;
+            top: 40px;
+            bottom: 0px;
+            right: 0px;
+            left: 460px;
+        }
+        .footer #texte8{
+            position: absolute;
+            margin: auto;
+            top: 60px;
+            bottom: 0px;
+            right: 0px;
+            left: 505px;
+        }
+        .footer #texte9{
+            position: absolute;
+            margin: auto;
+            top: 80px;
+            bottom: 0px;
+            right: 0px;
+            left: 505px;
+        }
+        .footer #texte10{
+            position: absolute;
+            margin: auto;
+            top: 100px;
+            bottom: 0px;
+            right: 0px;
+            left: 480px;
         }
 
 
@@ -248,20 +589,34 @@
 </head>
 <body>
 
-    <div class="header" >
-        <center><h1><b> ACCUEIL</b></h1></center>
-        <img src="home.png" height="50px" width="50px">
+    <div class="wrapper" >
+
+    <div class="header">
+            <h2 style="color: #194B8F;"><center>    Social Media Professionnel de l'ECE Paris</h2><center>
+                <img src="logopro.png" height="70px" width="90px" id="imagelogo">
+
     </div>
+    <div class="navigation">
+
+
+                <a href="accueil.html"><img src="Accueil.png" width="107" height="60px" id="bouton1"></a>
+                <a href="reseau.html"><img src="Reseau.png" width="120px" height="60px" id="bouton2"></a>
+                <a href="vous.html" ><img src="Vous.png" width="107" height="55px" id="bouton3"></a>
+                <a href="notifications.html"><img src="Notifications.png" width="120px" height="60px" id="bouton4"></a>
+                <a href="messagerie.html"><img src="Messagerie.png" width="107" height="60px" id="bouton5"></a>
+                <a href="emplois.html"><img src="Emplois.png" width="107" height="60px" id="bouton6"></a>
+
+     </div>
 
 
     <div class="container">
-        <p ><b>ECE Ln </b>est un site web social media professionnel pour la communauté ECE Paris. Ce site web sera un réseau social mais avec des <b>objectifs professionnels</b>. </p>
+        <p style="color:white"> <b>ECE Ln </b>est un site web social media professionnel pour la communauté ECE Paris. Ce site web sera un réseau social mais avec des <b>objectifs professionnels</b>. </p>
         <p></p>
-        <p>
+        <p style="color:white">
             Que vous soyez étudiant/e de licence, master ou doctorat, ou étudiant/e apprenti dans un entreprise, ou étudiant/e qui cherche un <b>stage dans une entreprise </b>ou peut-être un/e enseignant/e ou employé de l’Ecole qui cherche des <b>partenaires pour votre projet de recherche ou autre</b>, ce site web s'adresse à toutes et à tous qui souhaitent prendre leur vie professionnelle au sérieux, trouver de nouvelles opportunités pour développer leur carrière et se connecter avec d'autres personnes pour des buts professionnels.
         </p>
         <p></p>
-        <center><h2><b> EVENEMENT DE LA SEMAINE</b></h2></center> 
+        <center><h2 style="color:white"><b> EVENEMENT DE LA SEMAINE</b></h2></center> 
         
 
         <div id="myCarousel" class="carousel-slide" data-ride="carousel" data-interval="1000">
@@ -305,8 +660,33 @@
    <div class="section" >
     <center><h3><b>Journée porte ouverte à l'ECE</b></h3></center>
     <p>Vous souhaitez découvrir les locaux, visiter les laboratoires, rencontrer des élèves, les enseignements et la direction ? Les Portes Ouvertes sont un incontournable pour mieux connaître l’école. <b>Rencontrez les élèves </b>et échangez sur les séjours à l’international. Posez vos questions aux enseignants et aux diplomés de l’école. Venez nous rencontrer au <b>10 rue sextius michel</b>, Paris, le <b>28/05 </b>!</p>
-</div>
-<center><h1><b>TOUTES LES ACTIVITES</b></h1></center>
+    </div>
+
+    <div class="webinaire">
+       <img src="webinaire.png" > 
+    </div>
+
+    <div class="section2" >
+    <center><h3><b>Webinaire MSc SAP</b></h3></center>
+    <p>Vous souhaitez vous former sur un sujet à forte employabilité, en lien avec la transformation digitale dans la logistique et la finance ? Rejoignez en septembre 2023, la première promotion Sopra Steria x SAP du MSc « Consultant SAP Augmenté » au sein de l’école d’ingénieurs ECE Paris. Afin de découvrir cette formation en avant-première, nous vous invitions à un Webinaire dédié, ce mardi 23 mai à partir de 18h sur Teams. Voici le lien d'inscription : <a style="color : grey;" href="https://www.ece.fr/inseecu/conference/6699">https://www.ece.fr/inseecu/conference/6699</a></p>
+    </div>
+
+    <div class="evenement">
+       <img src="evenement.png" > 
+    </div>
+
+    <div class="section3" >
+    <center><h3><b>Découvrez le métier Développeur Full Stack !</b></h3></center>
+    <p>Le métier de Développeur Full Stack se développe sur le marché du travail !
+        Ce métier a vu ses offres augmentées de 36% par rapport à 2020.
+        Découvrez le Bachelor Numérique avec l'option d'approfondissement Full Stack de l'ECE. Il vous permet de répondre aux besoins des entreprises dans un environnement en constante innovation ! Voici le lien si vous avez des questions : <a style="color : grey;"  href="https://www.ece.fr/program/option-frontend-backend-fullstack/"> https://www.ece.fr/program/option-frontend-backend-fullstack/</a></p>
+    </div>
+
+
+
+
+ <center><h1 style="color:white"><b>TOUTES LES ACTIVITES</b></h1></center>
+
 
 <div class="votrePublication" >
     <img src="stelly.png" class="img-circle" id="imageProfil">
@@ -345,11 +725,34 @@
 
     
 </div>
+<div class="footer">
+    <center><img src="logopro.png" height="50px" width="70px" id="imagelogo"><center>
+    <h4 style="color: #194B8F"><center>    Social Media Professionnel de l'ECE Paris</h4><center>
+    <div id="texteFooter">
+        <p id="texte1" style="text-align: left;" >Notre site est là pour vous aider à trouver un travail qui vous correspond, à rester en contact avec vos amis et des professionnels, et être au courant des dernières informations et évènements à ne pas rater</p>
+        
+    </div>
+
+    <p id="texte2" style="color:#194B8F"><b>CONTACT</b></p>
+    <p id="texte3" >01 90 78 56 45</p>
+    <a id="a1" href="eceln@gmail.com">eceln@gmail.com</a>
+
+    <p id="texte4" style="color:#194B8F"><b>NAVIGATION</b></p>
+    <p id="texte5"><a href="accueil.html">Accueil</a></p>
+    <p id="texte6"><a href="reseau.html">Mon Reseau</a></p>
+    <p id="texte7"><a href="vous.html" >Vous</a></p>
+    <p id="texte8"><a href="notifications.html">Notifications</a></p>
+    <p id="texte9"><a href="messagerie.html">Messagerie</a></p>
+    <p id="texte10"><a href="emplois.html">Emplois</a></p>
+
+
+     <small>Copyright &copy; 2023, ECE ln, Social Media Professionnel de l'ECE Paris</small>
+</div>
 
 
 
 
-
+</div>
 </div>
 </body>
 </html>

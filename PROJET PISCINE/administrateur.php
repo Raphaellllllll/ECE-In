@@ -1,3 +1,66 @@
+<!DOCTYPE html> 
+ <html> 
+ <head> 
+ 	<title>Espace adminstrateur</title> 
+ 	<meta charset="utf-8"> 
+ 	<style type="text/css"> 
+ 		body { 
+ 			background-color: #eeeeee;
+ 			font-family: Helvetica, sans-serif;
+ 			text-align: center;
+ 			padding: 20px;
+ 			margin: 0 auto 20px auto;  
+ 		} 
+ 		h2 { 
+ 			text-align: center; 
+ 			color: white; 
+ 			background-color: #04048f; 
+ 			padding: 20px; 
+ 			width: 600px; 
+ 			margin: 0 auto 20px auto; 
+ 			border-radius: 5px; 
+ 		} 
+ 		table { 
+ 			width: 660px; 
+ 			margin: auto; 
+ 			background-color: #9999EE; 
+ 		} 
+ 		input { 
+ 			background-color: #6699EE; 
+ 		} 
+ 		
+ 	</style> 
+ </head> 
+ <body> 
+ 	<h2>Espace administrateur</h2> 
+ 	<form action="" method="post"> 
+
+ 		<br> Entrez les données utilisateurs, et choisissez l'opération à effectuer:</br>
+ 		<form action="" method="post"> 
+ 			<table border="1"> 
+ 				<tr> 
+ 					<td size="20">Pseudo</td> 
+ 					<td><input type="text" name="pseudo" size="70"></td> 
+ 				</tr> 
+ 				<tr> 
+ 					<td>Mail</td> 
+ 					<td><input type="text" name="email" size="70"></td> 
+ 				</tr> 
+ 				<tr>
+ 					<tr> 
+ 						<td colspan="2" align="center"> 
+ 							<input type="submit" name="button1" value="Rechercher"> 
+ 							<input type="submit" name="button2" value="Ajouter"> 
+ 							<input type="submit" name="button3" value="Supprimer"> 
+ 						</td> 
+ 					</tr> 
+ 				</table> 
+
+ 			</form> 
+ 		</body> 
+ 		</html> 
+
+
 <?php 
 
 
@@ -225,73 +288,3 @@ if (isset($_POST["button1"])){
  mysqli_close($db_handle); 
 
  ?> 
-
-
-
-
-
-
-
- <!DOCTYPE html> 
- <html> 
- <head> 
- 	<title>Espace adminstrateur</title> 
- 	<meta charset="utf-8"> 
- 	<style type="text/css"> 
- 		body { 
- 			background-color: #eeeeee;
- 			font-family: Helvetica, sans-serif;
- 			text-align: center;
- 			padding: 20px;
- 			margin: 0 auto 20px auto;  
- 		} 
- 		h2 { 
- 			text-align: center; 
- 			color: white; 
- 			background-color: #04048f; 
- 			padding: 20px; 
- 			width: 600px; 
- 			margin: 0 auto 20px auto; 
- 			border-radius: 5px; 
- 		} 
- 		table { 
- 			width: 660px; 
- 			margin: auto; 
- 			background-color: #9999EE; 
- 		} 
- 		input { 
- 			background-color: #6699EE; 
- 		} 
- 		
- 	</style> 
- </head> 
- <body> 
- 	<h2>Espace administrateur</h2> 
- 	<form action="" method="post"> 
-
- 		<br> Entrez les données utilisateurs, et choisissez l'opération à effectuer:</br>
- 		<form action="" method="post"> 
- 			<table border="1"> 
- 				<tr> 
- 					<td size="20">Pseudo</td> 
- 					<td><input type="text" name="pseudo" size="70"></td> 
- 				</tr> 
- 				<tr> 
- 					<td>Mail</td> 
- 					<td><input type="text" name="email" size="70"></td> 
- 				</tr> 
- 				<tr>
- 					<tr> 
- 						<td colspan="2" align="center"> 
- 							<input type="submit" name="button1" value="Rechercher"> 
- 							<input type="submit" name="button2" value="Ajouter"> 
- 							<input type="submit" name="button3" value="Supprimer"> 
- 						</td> 
- 					</tr> 
- 				</table> 
-
- 			</form> 
- 		</body> 
- 		</html> 
-
-
